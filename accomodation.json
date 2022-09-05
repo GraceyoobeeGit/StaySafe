@@ -1,0 +1,222 @@
+{
+"accomodation": [
+    {
+        "id": 1,
+        "image": "/image/hostel3.png",
+        "title":"Grand Millenium Hotel",
+        "type":"Hotel",
+        "location": "Auckland",
+        "description": "1-2 people | $157/night | min 1 night, max 5 nights",
+        "value": 157,
+        "min": 1,
+        "max": 2,
+        "staymin": 1,
+        "staymax": 5,
+        "meala": "Steak and blue cheese mussel",
+        "mealb": "Pasta and pizza",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 2,
+        "image": "/image/cordis.png",
+        "title":"Cordis Hotel",
+        "type":"Hotel",
+        "location": "Hamilton",
+        "description": "1-2 people | $157/night | min 1 night, max 5 nights",
+        "value": 157,
+        "min": 1,
+        "max": 2,
+        "staymin": 1,
+        "staymax": 5,
+        "meala": "Chicken Katsu Curry and takoyaki",
+        "mealb": "Udon and sashimi",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 3,
+        "image": "/image/hotel7.png",
+        "title":"Mercure Hotel",
+        "type":"Hotel",
+        "location": "Rotorua",
+        "description": "1-2 people | $157/night | min 1 night, max 5 nights",
+        "value": 157,
+        "min": 1,
+        "max": 2,
+        "staymin": 1,
+        "staymax": 5,
+        "meala": "Option1 (burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 4,
+        "image": "/image/motel.png",
+        "title":"Cedarwood motel",
+        "type":"Motel",
+        "location": "Auckland",
+        "description": "2-4 people | $90/night | min 3 nights, max 10 nights",
+        "value": 90,
+        "min": 2,
+        "max": 4,
+        "staymin": 3,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    }, 
+
+    {
+        "id": 5,
+        "image": "/image/motel2.png",
+        "title":"Motel in Rotorua",
+        "type":"Motel",
+        "location": "Hamilton",
+        "description": "2-4 people | $90/night | min 3 nights, max 10 nights",
+        "value": 90,
+        "min": 2,
+        "max": 4,
+        "staymin": 3,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    }, 
+
+    {
+        "id": 6,
+        "image": "/image/motel3.png",
+        "title":"Coachman motel",
+        "type":"Motel",
+        "location": "Rotorua",
+        "description": "2-4 people | $90/night | min 3 nights, max 10 nights",
+        "value": 90,
+        "min": 2,
+        "max": 4,
+        "staymin": 3,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    }, 
+
+    {
+        "id": 7,
+        "image": "/image/hostel.png",
+        "title":"Victoria lodge",
+        "type":"Hostel",
+        "location": "Auckland",
+        "description": "1 person | $30/night | min 1 night, max 10 nights",
+        "value": 30,
+        "min": 1,
+        "max": 1,
+        "staymin": 1,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (Pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 8,
+        "image": "/image/hostel2.png",
+        "title":"Planet Backpackers",
+        "type":"Hostel",
+        "location": "Hamilton",
+        "description": "1 person | $30/night | min 1 night, max 10 nights",
+        "value": 30,
+        "min": 1,
+        "max": 1,
+        "staymin": 1,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (Pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 9,
+        "image": "/image/hostel3.png",
+        "title":"Kiwi as guest house",
+        "type":"Hostel",
+        "location": "Rotorua",
+        "description": "1 person | $30/night | min 1 night, max 10 nights",
+        "value": 30,
+        "min": 1,
+        "max": 1,
+        "staymin": 1,
+        "staymax": 10,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (Pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+
+    {
+        "id": 10,
+        "image": "/image/house.png",
+        "title":"House in Christchurch",
+        "type":"House",
+        "location": "Auckland",
+        "description": "1-4 people | $240/night | min 2 nights, max 15 nights",
+        "value": 240,
+        "min": 1,
+        "max": 4,
+        "staymin": 2,
+        "staymax": 15,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 11,
+        "image": "/image/house2.png",
+        "title":"House in Tauranga",
+        "type":"House",
+        "location": "Hamilton",
+        "description": "1-4 people | $240/night | min 2 nights, max 15 nights",
+        "value": 240,
+        "min": 1,
+        "max": 4,
+        "staymin": 2,
+        "staymax": 15,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    },
+
+    {
+        "id": 12,
+        "image": "/image/house3.png",
+        "title":"House in Rotorua",
+        "type":"House",
+        "location": "Rotorua",
+        "description": "1-4 people | $240/night | min 2 nights, max 15 nights",
+        "value": 240,
+        "min": 1,
+        "max": 4,
+        "staymin": 2,
+        "staymax": 15,
+        "meala": "Option1 (Burger)",
+        "mealb": "Option2 (pizza)",
+        "facility": "Free toiletries, Safety deposit box, Toilet, Sofa, Bath or shower, Towels, Linen, Seating Area",
+        "check": "Check-in time: 10am & Check-out time: 11am"
+    }
+]
+}
+
+

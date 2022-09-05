@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e241ce5fd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+<body>
+    <div class="header">
+      <img class="logo" src="./image/staysafebrand.png" width="180" height="60" alt="image of staysafe logo">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Accomodation</li>
+            <li>Deals</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+    <div class="user-box"><i class="fa-solid fa-user"></i></div>
+    
+    <div class="heading">
+    <p class="heading__title">Stay Safe Trip</p>
+    <p class="heading__subtitle">Book your accomodation with us</p>
+    </div>
+</div>
+
+
+<div class="main">
+  <p class="main__subtitle">Plan your trip</p>
+<div class="main__language">
+  <select class="main__language--menu" name="languages">
+    <option>Select Language</option>
+    <option value="ar">Arabic - العربية</option>
+    <option value="zh">Chinese - 中文</option>
+    <option value="zh-HK">Chinese (Hong Kong) - 中文（香港）</option>
+    <option value="en">English</option>
+    <option value="eo">Esperanto - esperanto</option>
+    <option value="fil">Filipino</option>
+    <option value="fr">French - français</option>
+    <option value="de">German - Deutsch</option>
+    <option value="hi">Hindi - हिन्दी</option>
+    <option value="ja">Japanese - 日本語</option>
+  </select>
+</div>
+
+  <div class="main__plancontainer">
+    <form class="main__plancontainer--myform" name="RegForm">
+          <div class="row">
+            <div class="label-div">
+              <label class="row-label">Type of accomodation</label>
+            </div>
+            <select class="row__accomenu" id="type-input" name="languages">
+              <option>Hotel</option>
+              <option>Motel</option>
+              <option>Hostel</option>
+              <option>House</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="label-div"><label class="row-label">Location</label></div>
+            <select class="row__locationmenu" id="location-input" name="languages">
+              <option>Auckland</option>
+              <option>Rotorua</option>
+              <option>Hamilton</option>
+            </select>
+          </div>
+          
+           <div class="row">
+            <div class="label-div">
+              <label class="row-label">Number of people</label>
+            </div>
+            <div class="input-div">
+              <input type="number" id="number-input" name="number-input" class="row-input" min="1" max="4" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="label-div">
+              <label class="row-label">Date</label>
+            </div>
+            <div class="input-div">
+              <input type="date" name="fname" id="start-date" class="row-input" required>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="label-div">
+              <label class="row-label">Days of stay</label>
+            </div>
+            <div class="input-div">
+              <div id="day-input" class="row-input"></div>
+            </div>
+          </div>
+          
+          <div class="search">
+            <button class="search__btn" type="button" id="search-button" onclick="return formValidation()">Search</button>
+            </div> 
+      </form>
+       </div> 
+
+       <div class="main__info">
+        <div class="main__info--Hotel">
+        <h3>Hotel</h3>
+        <p>1-2 people | $157/night | min 1 night, max 5 nights</p>
+        </div>
+        <div class="main__info--Motel">
+        <h3>Motel</h3>
+        <p>2-4 people | $90/night | min 3 nights, max 10 nights</p>
+        </div>
+        <div class="main__info--Hostel">
+          <h3>Hostel</h3>
+          <p>1 person | $30/night | min 1 night, max 10 nights</p>
+          </div>
+          <div class="main__info--House">
+            <h3>House</h3>
+            <p>1-4 people | $240/night | min 2 nights, max 15 nights</p>
+            </div>
+        </div>
+        <div id="main__accomodationlist" class="accomodation-section hidden"> 
+        </div>
+       </div>
+  
+
+
+<div id="myModal" class="modal">
+  <div class="modal__content">
+<h2 class="success" style="display:none; color: green; margin-top: 2em;">Your Booking has been done successfully</h2>
+ <div class="modal__content--sumbox">
+    <img class="modal-image" src="/image/cordis.png" alt="image of accomodation"/>
+    <div id="bookSum" class="modal__content--summary">
+    <p class="summary__title">Booking Summary</p>
+    <table class="tablesum">
+      <tr>
+        <td>Check in & out Date</td>
+        <td id="chInDate"></td>
+      </tr>
+      <tr>
+        <td>Number of Days</td>
+        <td id="totalDays"></td>
+      </tr>
+      <tr>
+        <td>Number of People</td>
+        <td id="totalPerson"></td>
+      </tr>
+      <tr>
+        <td>Accomodation type</td>
+        <td id="accoType"></td>
+      </tr>
+      <tr>
+        <td>Total Amount</td>
+        <td id="totalAmount"></td>
+      </tr>
+    </table>
+    </div>
+    <span class="close">&times;</span>
+    </div>
+
+    <div class="modal__meal">
+      <fieldset class="modal__meal--container" style="display: none;">
+      <legend>Chosen meal</legend>
+      <p class="meal-selected"></p>
+      </fieldset>
+    <fieldset class="choose-meal">
+      <legend>Select meal option</legend>
+      <div>
+        <input type="radio" name="food" id="mealone">
+        <label id="option-a">Meal Option A</label>
+      </div>
+      <div>
+        <input type="radio" name="food" id="mealtwo">
+        <label id="option-b">Meal Option B</label>
+      </div> 
+  </fieldset>
+  </div>
+
+  <div class="modal__meal--confirm">
+  <button id="confirm-btn" class="confirm__btn" type="submit">confirm</button>
+  </div>
+    </div>
+  </div>
+
+
+<div class="feedback"> 
+  <div class="feedback__box">
+  <p class="feedback__title">Leave your feedback with us</p>
+    <form class="feedback__box--form" id="review">
+    <div class="form-group">
+    <label for="feedback">Feedback</label>
+    <textarea class="form-input" id="feedback" rows="4" cols="50">
+      Write here...
+    </textarea>
+    </div>
+    <div class="form-group">
+    <label for="name">Your Name</label>
+    <input class="form-input" id="name" type="text">
+    </div>
+    <div class="form-group">
+    <label for="email">Your email address</label>
+    <input class="form-input" id="email" type="email">
+    </div>
+    <button class="feedback__btn" type="button" onclick="FeedbackForm()">Submit</button>
+    </form>
+    <p id="feedback__text"></p>
+    </div>
+    <div id="map">  
+    </div>
+
+   </div>
+    
+
+</body>
+</html>
